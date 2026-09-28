@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dinas Akademi | Privatlektioner i spanska i Stockholm och online</title>
+<meta name="description" content="Privatlektioner i spanska för vuxna och för elever från åk 6 till gymnasiet. Lärare med erfarenhet från svenska skolor. Första lektionen är gratis.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23B5482A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-weight='700' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#F6F1EA; --sand-2:#EDE5D9; --line:#E4DACB;
+  --ink:#1E2A38; --muted:#4A5563; --muted-dark:#D5DBE3;
+  --accent:#B5482A; --accent-dark:#7A2E19; --accent-text:#9E3D22;
+  --saffron:#F2B77A; --green:#1F6F5C; --white:#FFFFFF;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'DM Sans','Helvetica Neue',Helvetica,sans-serif;
+  --pad:clamp(20px,6vw,96px);
+  --section:clamp(56px,8vw,104px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:600;margin:0;line-height:1.1}
+p{margin:0}
+a{color:var(--accent-text)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.wrap{max-width:1440px;margin:0 auto;padding-inline:var(--pad)}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text)}
+.lead{font-size:clamp(16px,1.4vw,20px);color:var(--muted);max-width:60ch}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 28px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-family:inherit;transition:background-color .15s,color .15s}
+.btn-accent{background:var(--accent);color:var(--white)}
+.btn-accent:hover{background:var(--accent-dark);color:var(--white)}
+.btn-outline{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-outline:hover{background:var(--ink);color:var(--white)}
+.btn-ink{background:var(--ink);color:var(--white)}
+.btn-ink:hover{background:#0f1720;color:var(--white)}
+.btn-saffron{background:var(--saffron);color:var(--ink)}
+.btn-saffron:hover{background:#e9a45c;color:var(--ink)}
+.btn-white{background:var(--white);color:var(--accent-dark)}
+.btn-white:hover{background:var(--sand);color:var(--accent-dark)}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:10;background:rgba(246,241,234,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.site-header .wrap{height:clamp(68px,7vw,96px);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.logo-mark{width:40px;height:40px;border-radius:10px;background:var(--accent);color:var(--white);display:grid;place-items:center;font-family:var(--serif);font-size:24px;font-weight:700}
+.logo-name{font-family:var(--serif);font-size:clamp(20px,2vw,24px);font-weight:600}
+.nav{display:flex;align-items:center;gap:36px;font-weight:500}
+.nav a{color:var(--ink);text-decoration:none}
+.nav a:not(.btn):hover{color:var(--accent-text)}
+.nav .btn{min-height:46px;padding:10px 22px;font-size:16px}
+.menu-toggle{display:none;width:46px;height:46px;border:1.5px solid var(--ink);border-radius:12px;background:transparent;color:var(--ink);align-items:center;justify-content:center;cursor:pointer}
+@media (max-width:900px){
+  .menu-toggle{display:inline-flex}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--sand);border-bottom:1px solid var(--line);padding:8px var(--pad) 20px;display:none}
+  .nav.open{display:flex}
+  .nav a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line);font-size:18px}
+  .nav .btn{margin-top:16px;min-height:52px}
+}
+
+/* Hero */
+.hero{padding-block:clamp(44px,7vw,96px) var(--section)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero-text{display:flex;flex-direction:column;gap:clamp(20px,2vw,28px)}
+.hero h1{font-size:clamp(40px,5vw,72px);line-height:1.04;letter-spacing:-.02em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;padding-top:6px}
+.plan-visual{background:var(--ink);border-radius:28px;padding:clamp(24px,3.5vw,48px) clamp(20px,3.5vw,48px);display:flex;flex-direction:column;gap:clamp(18px,2vw,24px)}
+.bubble{align-self:flex-start;background:var(--saffron);color:var(--ink);font-family:var(--serif);font-weight:600;font-size:clamp(21px,2.2vw,30px);padding:14px 20px;border-radius:20px 20px 20px 6px}
+.plan-card{background:var(--white);border-radius:22px;padding:clamp(20px,2.4vw,32px);display:flex;flex-direction:column;gap:16px}
+.plan-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.plan-head .eyebrow{font-size:13px}
+.plan-level{font-size:14px;font-weight:700;color:var(--muted)}
+.progress{height:10px;border-radius:999px;background:var(--sand-2);overflow:hidden}
+.progress span{display:block;height:100%;width:60%;background:var(--accent);border-radius:999px}
+.plan-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.plan-list li{display:flex;gap:12px;align-items:flex-start;font-size:clamp(15px,1.2vw,17px);line-height:1.45}
+.plan-list svg{flex-shrink:0;margin-top:1px}
+.plan-list .current{font-weight:700}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero-actions .btn{flex:1 1 100%}}
+
+/* Offer */
+.offer{background:var(--white);padding-block:var(--section)}
+.section-head{display:flex;flex-direction:column;gap:16px;max-width:760px;margin-bottom:clamp(32px,4vw,56px)}
+.section-head h2,.section h2{font-size:clamp(32px,3.6vw,52px)}
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.2vw,32px)}
+.offer-card{border-radius:28px;padding:clamp(28px,3.4vw,48px) clamp(22px,3.4vw,48px);display:flex;flex-direction:column;gap:22px}
+.offer-card h3{font-size:clamp(28px,2.7vw,38px);line-height:1.15}
+.offer-card .btn{align-self:flex-start;margin-top:auto}
+.card-adults{background:var(--sand)}
+.card-adults p{color:var(--muted)}
+.levels{display:flex;flex-direction:column;gap:12px}
+.level{background:var(--white);border-radius:16px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.level strong{display:block;font-size:18px}
+.level span{font-size:15px;color:var(--muted);line-height:1.4}
+.level b{font-size:15px;white-space:nowrap}
+.card-school{background:var(--ink);color:var(--white)}
+.card-school .eyebrow{color:var(--saffron)}
+.card-school p{color:var(--muted-dark)}
+.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.checks li{display:flex;gap:14px;align-items:flex-start;line-height:1.5}
+.checks svg{flex-shrink:0;margin-top:2px}
+@media (max-width:900px){.offer-grid{grid-template-columns:1fr}.offer-card .btn{align-self:stretch}}
+
+/* Steps */
+.section{padding-block:var(--section)}
+.steps{list-style:none;margin:clamp(24px,3vw,48px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{background:var(--white);border-radius:22px;padding:clamp(22px,2.4vw,32px);display:flex;flex-direction:column;gap:12px}
+.step-num{font-family:var(--serif);font-size:44px;line-height:1;font-weight:600;color:var(--accent)}
+.step h3{font-family:var(--sans);font-size:20px;font-weight:700}
+.step p{font-size:16px;color:var(--muted)}
+@media (max-width:1100px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){
+  .steps{grid-template-columns:1fr;gap:14px}
+  .step{flex-direction:row;gap:16px;align-items:flex-start}
+  .step-num{font-size:34px}
+}
+
+/* About */
+.about{background:var(--white);padding-block:var(--section)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.person{background:var(--sand);border-radius:22px;padding:clamp(20px,2.6vw,36px);display:flex;flex-direction:column;gap:14px}
+.avatar{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;color:var(--white);font-family:var(--serif);font-size:40px;font-weight:600;flex-shrink:0}
+.avatar-ink{background:var(--ink)}
+.avatar-accent{background:var(--accent)}
+.person strong{font-size:20px}
+.person span{font-size:15px;color:var(--muted);line-height:1.5}
+.about-text{display:flex;flex-direction:column;gap:22px}
+.about-text p{font-size:clamp(16px,1.3vw,19px);color:var(--muted);line-height:1.65}
+@media (max-width:900px){
+  .about .wrap{grid-template-columns:1fr}
+  .about-text{order:-1}
+  .people{grid-template-columns:1fr;gap:14px}
+  .person{flex-direction:row;align-items:center;gap:16px}
+  .avatar{width:64px;height:64px;font-size:28px}
+}
+
+/* Prices */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:clamp(24px,3vw,48px)}
+.price{background:var(--white);border-radius:24px;padding:clamp(24px,2.8vw,40px);display:flex;flex-direction:column;gap:14px}
+.price h3{font-family:var(--sans);font-size:18px;font-weight:700}
+.price .amount{font-family:var(--serif);font-size:clamp(40px,3.4vw,48px);font-weight:600;line-height:1.1}
+.price p{font-size:16px;color:var(--muted)}
+.price .btn{margin-top:auto}
+.price-featured{background:var(--accent);color:var(--white)}
+.price-featured p{color:#FBEAE3}
+.price-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.badge{background:var(--white);color:var(--accent-dark);font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px}
+@media (max-width:900px){
+  .prices{grid-template-columns:1fr;gap:14px}
+  .price-featured{order:-1}
+}
+
+/* Contact */
+.contact{background:var(--ink);color:var(--white);padding-block:var(--section)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px)}
+.contact-intro{display:flex;flex-direction:column;gap:22px}
+.contact-intro p{color:var(--muted-dark);font-size:clamp(16px,1.3vw,19px)}
+.contact-links{display:flex;flex-direction:column;gap:6px}
+.contact-links a{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--white);text-decoration:none;font-size:18px}
+.contact-links a:hover{text-decoration:underline}
+.form{background:var(--white);color:var(--ink);border-radius:24px;padding:clamp(22px,2.8vw,40px);display:flex;flex-direction:column;gap:18px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:15px;font-weight:700}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:12px 14px;border-radius:12px;border:1.5px solid #CFC4B4;font-size:16px;font-family:inherit;color:var(--ink);background:var(--white)}
+.field textarea{resize:vertical;min-height:120px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form .btn{width:100%;min-height:56px}
+.btn-whatsapp{background:#25D366;color:var(--ink);gap:10px}
+.btn-whatsapp:hover{background:#1ebe5a;color:var(--ink)}
+.form-alt{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.form-alt::before,.form-alt::after{content:"";flex:1;height:1px;background:var(--line)}
+.contact-intro .btn-whatsapp{align-self:flex-start}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:20;width:58px;height:58px;border-radius:50%;background:#25D366;color:var(--ink);display:grid;place-items:center;box-shadow:0 6px 18px rgba(30,42,56,.25);text-decoration:none}
+.wa-float:hover{background:#1ebe5a}
+@media (max-width:900px){.contact-intro .btn-whatsapp{align-self:stretch}}
+.form-status{font-size:15px;line-height:1.5;min-height:1px}
+.form-status.ok{color:var(--green);font-weight:700}
+.form-status.error{color:#A02A1B;font-weight:700}
+@media (max-width:900px){.contact .wrap{grid-template-columns:1fr}}
+@media (max-width:520px){.form-row{grid-template-columns:1fr}}
+
+/* Footer */
+.site-footer{padding-block:40px}
+.site-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap;font-size:15px;color:var(--muted)}
+.site-footer strong{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Dinas Akademi, till början av sidan">
+      <span class="logo-mark" aria-hidden="true">D</span>
+      <span class="logo-name">Dinas Akademi</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Öppna meny" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Huvudmeny">
+      <a href="#skolan">För skolan</a>
+      <a href="#vuxna">För vuxna</a>
+      <a href="#om-oss">Om oss</a>
+      <a href="#priser">Priser</a>
+      <a href="#kontakt" class="btn btn-ink">Boka provlektion</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="eyebrow">Spanska i Stockholm och online</p>
+        <h1>Lär dig spanska på riktigt, med en plan som är gjord för dig.</h1>
+        <p class="lead">Privatlektioner med lärare som har undervisat i spanska i svenska skolor. För vuxna som vill komma igång eller komma vidare, och för elever från åk 6 till gymnasiet.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-accent">Boka en gratis provlektion</a>
+          <a href="#upplagg" class="btn btn-outline">Se våra upplägg</a>
+        </div>
+      </div>
+      <div class="plan-visual" aria-label="Exempel på en personlig studieplan">
+        <div class="bubble" lang="es">¡Hola! ¿Qué tal tu semana?</div>
+        <div class="plan-card">
+          <div class="plan-head">
+            <span class="eyebrow">Exempel på personlig plan</span>
+            <span class="plan-level">Nivå B1, vecka 6 av 10</span>
+          </div>
+          <div class="progress" role="img" aria-label="60 procent av planen avklarad"><span></span></div>
+          <ul class="plan-list">
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Berätta om erfarenheter med preteritum och imperfekt</li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Förstå nyhetsinslag och sammanfatta dem muntligt</li>
+            <li class="current"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9E3D22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>Denna vecka: argumentera och uttrycka åsikter med subjunktiv</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer" id="upplagg">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Två vägar, ett mål: att du faktiskt pratar spanska.</h2>
+        <p class="lead">Du behöver inte veta din nivå i förväg. Vi gör ett kort nivåtest på provlektionen och lägger upplägget utifrån det.</p>
+      </div>
+      <div class="offer-grid">
+
+        <article class="offer-card card-adults" id="vuxna">
+          <p class="eyebrow">För vuxna</p>
+          <h3>Spanska för vuxna</h3>
+          <p>Från noll eller för att ta nästa steg. Vi utgår från varför du vill lära dig: resor, jobb, familj eller för att kunna prata obehindrat.</p>
+          <div class="levels">
+            <div class="level"><div><strong>Nybörjare</strong><span>Du börjar från noll eller kan några ord</span></div><b>A1-A2</b></div>
+            <div class="level"><div><strong>Mellannivå</strong><span>Du klarar vardagen men vill prata friare</span></div><b>B1-B2</b></div>
+            <div class="level"><div><strong>Avancerad</strong><span>Du vill finslipa språket för jobb eller studier</span></div><b>C1</b></div>
+          </div>
+          <a href="#kontakt" class="btn btn-ink" data-interest="Spanska för vuxna">Boka provlektion för vuxna</a>
+        </article>
+
+        <article class="offer-card card-school" id="skolan">
+          <p class="eyebrow">För elever åk 6 till gymnasiet</p>
+          <h3>Spanska för skolan</h3>
+          <p>Vi har själva undervisat i spanska i svenska skolor. Vi vet vad som bedöms och hjälper eleven att nå nästa betyg, steg för steg.</p>
+          <ul class="checks">
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2B77A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Stöd för att höja betyget, kopplat till kursplanen</li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2B77A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Förberedelse inför prov och muntliga redovisningar</li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2B77A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Hjälp med läxor och uppgifter från skolan</li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2B77A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Regelbunden återkoppling till föräldrar om hur det går</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-saffron" data-interest="Spanska för skolan (åk 6 till gymnasiet)">Boka provlektion för ditt barn</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Så går det till</h2>
+      <ol class="steps">
+        <li class="step"><span class="step-num" aria-hidden="true">1</span><div><h3>Gratis provlektion</h3><p>Vi lär känna dig, gör ett kort nivåtest och pratar om dina mål.</p></div></li>
+        <li class="step"><span class="step-num" aria-hidden="true">2</span><div><h3>Din personliga plan</h3><p>Du får ett upplägg med tydliga delmål, anpassat efter din nivå och ditt tempo.</p></div></li>
+        <li class="step"><span class="step-num" aria-hidden="true">3</span><div><h3>Lektioner varje vecka</h3><p>Online eller på plats i Stockholm, på tider som passar dig.</p></div></li>
+        <li class="step"><span class="step-num" aria-hidden="true">4</span><div><h3>Uppföljning</h3><p>Vi följer upp dina framsteg regelbundet och justerar planen vid behov.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="about" id="om-oss">
+    <div class="wrap">
+      <div class="people">
+        <div class="person">
+          <span class="avatar avatar-ink" aria-hidden="true">I</span>
+          <div><strong>Ilias</strong><br><span>2 års erfarenhet av spanskundervisning</span></div>
+        </div>
+        <div class="person">
+          <span class="avatar avatar-accent" aria-hidden="true">H</span>
+          <div><strong>Hakima</strong><br><span>3 års erfarenhet av spanskundervisning</span></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">Om oss</p>
+        <h2>Ett familjeprojekt med rötter i klassrummet.</h2>
+        <p>Vi är två engagerade personer och har båda undervisat i spanska i svenska skolor. Där såg vi hur mycket snabbare elever utvecklas när någon har tid att se just dem.</p>
+        <p>Därför startade vi Dinas Akademi: undervisning i liten skala, med en tydlig plan och lärare som bryr sig om att du faktiskt lyckas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="priser">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <h2>Priser</h2>
+        <p class="lead">Samma priser för vuxna och elever. Första lektionen är alltid gratis.</p>
+      </div>
+      <div class="prices">
+        <div class="price">
+          <h3>Provlektion</h3>
+          <p class="amount">0 kr</p>
+          <p>30 minuter. Nivåtest, genomgång av dina mål och förslag på upplägg.</p>
+          <a href="#kontakt" class="btn btn-outline">Boka gratis</a>
+        </div>
+        <div class="price">
+          <h3>Enstaka lektion</h3>
+          <p class="amount">250 kr</p>
+          <p>60 minuter. Passar dig som vill ha extra hjälp inför ett prov eller en resa.</p>
+          <a href="#kontakt" class="btn btn-outline">Boka lektion</a>
+        </div>
+        <div class="price price-featured">
+          <div class="price-top"><h3>Paket 10 lektioner</h3><span class="badge">Populärast</span></div>
+          <p class="amount">1999 kr</p>
+          <p>10 x 60 minuter med personlig plan och uppföljning. Lägre pris per lektion.</p>
+          <a href="#kontakt" class="btn btn-white">Välj paket</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <div class="wrap">
+      <div class="contact-intro">
+        <h2 style="font-size:clamp(32px,3.6vw,52px)">Boka din gratis provlektion</h2>
+        <p>Snabbast är att skriva till oss på WhatsApp. Du kan också fylla i formuläret, så hör vi av oss inom ett dygn.</p>
+        <a class="btn btn-whatsapp" href="https://wa.me/46732069915?text=Hej%21%20Jag%20%C3%A4r%20intresserad%20av%20en%20gratis%20provlektion%20i%20spanska." target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>Skriv till oss på WhatsApp</a>
+        <div class="contact-links">
+          <a href="mailto:Iliasmk50@gmail.com"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2B77A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Iliasmk50@gmail.com</a>
+          <a href="tel:+46732069915"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2B77A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>073-206 99 15</a>
+        </div>
+      </div>
+
+      <!-- Replace YOUR_APPS_SCRIPT_URL with the Web app URL from Google Apps Script -->
+      <form class="form" id="contact-form" action="https://script.google.com/macros/s/AKfycbznfsN0uKnDFLKcw2nPFcnAIihPP_FjfM1pBbFsnwFZXADITkpgMt40r5LVslGlZAc0XQ/exec" method="POST">
+        <div class="hp" aria-hidden="true"><label for="website">Lämna tomt</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="form-row">
+          <div class="field"><label for="name">Namn</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="email">E-post</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="interest">Jag är intresserad av</label>
+          <select id="interest" name="interest">
+            <option>Spanska för vuxna</option>
+            <option>Spanska för skolan (åk 6 till gymnasiet)</option>
+          </select>
+        </div>
+        <div class="field"><label for="message">Berätta kort om dina mål</label><textarea id="message" name="message" rows="4"></textarea></div>
+        <button type="submit" class="btn btn-accent">Skicka förfrågan</button>
+        <p class="form-alt">eller</p>
+        <button type="button" class="btn btn-whatsapp" id="whatsapp-send"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>Skicka via WhatsApp istället</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<a class="wa-float" href="https://wa.me/46732069915?text=Hej%21%20Jag%20%C3%A4r%20intresserad%20av%20en%20gratis%20provlektion%20i%20spanska." target="_blank" rel="noopener" aria-label="Skriv till oss på WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <strong>Dinas Akademi</strong>
+    <span>Spanska för vuxna och elever, Stockholm och online</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Mobile menu
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('nav');
+  toggle.addEventListener('click', function () {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Stäng meny' : 'Öppna meny');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Öppna meny');
+    });
+  });
+
+  // Preselect the interest when a card button is clicked
+  const interestSelect = document.getElementById('interest');
+  document.querySelectorAll('[data-interest]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      interestSelect.value = btn.getAttribute('data-interest');
+    });
+  });
+
+  // Contact form: saves the request in your own Google Sheet via Apps Script
+  const WHATSAPP_NUMBER = '46732069915';
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const submitButton = form.querySelector('button[type="submit"]');
+    status.className = 'form-status';
+    status.textContent = 'Skickar...';
+    submitButton.disabled = true;
+    try {
+      // Apps Script does not return CORS headers, so the response is opaque (no-cors)
+      await fetch(form.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(new FormData(form))
+      });
+      form.reset();
+      status.className = 'form-status ok';
+      status.textContent = 'Tack! Din förfrågan är skickad. Vi hör av oss inom ett dygn.';
+    } catch (error) {
+      status.className = 'form-status error';
+      status.textContent = 'Förfrågan kunde inte skickas. Försök igen eller skriv till oss på WhatsApp.';
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+
+  // Send the same form content as a WhatsApp message
+  document.getElementById('whatsapp-send').addEventListener('click', function () {
+    const name = document.getElementById('name').value.trim();
+    const interest = document.getElementById('interest').value;
+    const message = document.getElementById('message').value.trim();
+    let text = 'Hej! Jag är intresserad av en gratis provlektion.';
+    if (name) text += '\nNamn: ' + name;
+    text += '\nIntresserad av: ' + interest;
+    if (message) text += '\nMina mål: ' + message;
+    window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
